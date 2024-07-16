@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReporTest.DataUser"
+             Title="Perfil"
+             IconImageSource="user.png">
+
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start"/>
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="10">
+                
+                <Label Text="Datos del usuario"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    FontSize="Large"
+                    Margin="0,0,0,30"
+                    FontAttributes="Bold"/>
+
+                <Label Text="Nombre"
+                    FontSize="Medium"
+                    Margin="15,0,0,15"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontAttributes="Bold"/>
+
+                <Label x:Name="LblNombre" Margin="15,0,0,15" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                <Label Text="Apellido"
+                    FontSize="Medium"
+                    Margin="15,0,0,15" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontAttributes="Bold"/>
+
+            <Label x:Name="LblApellido" Margin="15,0,0,15" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                <Label Text="Edad"
+                    FontSize="Medium"
+                    Margin="15,0,0,15" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontAttributes="Bold"/>
+
+                <Label x:Name="LblEdad" Margin="15,0,0,15" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                <Label Text="Puesto"
+                    FontSize="Medium"
+                    Margin="15,0,0,15" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontAttributes="Bold"/>
+
+                <Label x:Name="LblPuesto" Margin="15,0,0,15" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="End">
+                <Button  
+                    HorizontalOptions="Center" VerticalOptions="End"
+                    Clicked="BtnCerrarSesion_Clicked"
+                    Text="Cerrar sesión"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    BorderColor="DarkBlue"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    ImageSource="logout.png"
+                    Margin="0,0,0,35"/>
+            </StackLayout>
+        </StackLayout>
+
+</ContentPage>

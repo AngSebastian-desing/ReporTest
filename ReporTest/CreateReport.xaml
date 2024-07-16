@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReporTest.CreateReport"
+             Title="Crear reporte"
+             IconImageSource="createeport.png">
+
+    <ContentPage Title="Crear nuevo reporte">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="Center" Padding="10">
+                <Entry x:Name="txtTitulo" Placeholder="Título" PlaceholderColor="Gray" Margin="20,0,20,20"
+                       MaxLength="80"></Entry>
+                <Editor  x:Name="txtDescripcion" Placeholder="Descripción:"  
+                         HeightRequest="90" PlaceholderColor="Gray" Margin="20,0,20,20"  MaxLength="512"></Editor>
+                <Button Text="  Tomar Foto" Clicked="TakePhotoButton_Clicked" Grid.Row="1" CornerRadius="50" ImageSource="camera.png" HorizontalOptions="Center" />
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Image x:Name="showResult" Source="default_img.png" Opacity="0.25" />
+                    <Button Text="Crear Reporte" Clicked="Button_Clicked" 
+                            Grid.Row="1" CornerRadius="50" 
+                            TextColor="White"
+                            BackgroundColor="LightSeaGreen" 
+                            HorizontalOptions="End" Margin="0,25,0,0"
+                            ImageSource="sendfile.png"/>
+
+                </Grid>
+                
+                
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+
+</TabbedPage>

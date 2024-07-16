@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ReporTest.Util" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="ReporTest.ReportsList"
+             Title="Lista de reportes"
+             IconImageSource="filecheck.png">
+
+    <ContentPage Title="Lista de reportes">
+        <ContentPage.Content>
+            
+            <StackLayout>
+               
+                <ListView x:Name="ReportList"
+                          HasUnevenRows="True"
+                          SeparatorColor="Gray"
+                          SeparatorVisibility="None"
+                          IsPullToRefreshEnabled="True"
+                          Refreshing="ReportsListView_Refresh"
+                          RefreshControlColor="DarkBlue"
+                          Margin="15"
+                          ItemTapped="ReportList_ItemTapped">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="5">
+                                    <Frame CornerRadius="10" HasShadow="True">
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                                                <Label Text="Folio" FontAttributes="Bold"></Label>
+                                                <Label Text="{Binding Folio}"></Label>
+                                                <Label Text="Titulo" FontAttributes="Bold"></Label>
+                                                <Label Text="{Binding Titulo}"></Label>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="CenterAndExpand"/>
+                                            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                                                <Label Text="{Binding Estatus, Converter={StaticResource StatusConverter}}" FontAttributes="Bold"></Label>
+                                                <BoxView Color="{Binding Estatus, Converter={StaticResource ColorConverter}}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></BoxView>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                                
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    
+</TabbedPage>

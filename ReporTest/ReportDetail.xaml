@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ReporTest.Util"
+             x:Class="ReporTest.ReportDetail"
+             Title="Información del reporte">
+    <ContentPage.Content>
+        <Grid Padding="15" VerticalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Definir las filas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Título de la página -->
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Detalle del reporte" 
+                   VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" Margin="0,0,0,10"/>
+
+            <!-- Filas de contenido -->
+            <Label Grid.Row="1" Grid.Column="0" Text="Folio" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="1" Grid.Column="1" x:Name="Lblfolio" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Título" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="2" Grid.Column="1" x:Name="LblTitulo" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" LineBreakMode="WordWrap"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Descripción" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="3" Grid.Column="1" x:Name="LblDescripcion" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" LineBreakMode="WordWrap"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Fecha" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="4" Grid.Column="1" x:Name="LblFecha" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" />
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Estatus" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="5" Grid.Column="1" x:Name="LblEstatus" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Fecha autorizado" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="6" Grid.Column="1" x:Name="LblFechaAuth" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Text="Usuario antendió" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Grid.Row="7" Grid.Column="1" x:Name="LblUsuarioAtn" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Text="Imagen del reporte" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Image Grid.Row="8" Grid.Column="1" x:Name="ImgReporte" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

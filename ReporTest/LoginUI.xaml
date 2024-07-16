@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReporTest.LoginUI"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="35" VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+
+
+            <Image Source="logo.png" WidthRequest="200" HeightRequest="320"/>
+
+            <Entry x:Name="txtUserName" Placeholder="Usuario" PlaceholderColor="Gray"  Margin="0,0,0,20"></Entry>
+            <Entry x:Name="txtPass" Placeholder="Contraseña" IsPassword="True" PlaceholderColor="Gray" Margin="0,0,0,20"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Iniciar sesión"
+                TextColor="Blue"
+                BorderColor="DarkBlue"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="BtnLogin"
+                />
+
+            <ContentView IsVisible="{Binding IsBusy}" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" Color="DarkBlue" />
+            </ContentView>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Crear tu cuenta " TextColor="Gray"></Span>
+                        <Span Text="aquí." TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
